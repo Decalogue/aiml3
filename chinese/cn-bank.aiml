@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<meta name="author" content="Andelf"/>
+<meta name="language" content="zh"/>
+
+<!-- Machine Learning -->
+
+<!-- Tuling -->
+<category>
+<pattern>*</pattern>
+<template>
+<think><set name="tuling"><star/></set></think>
+<system>python api/tuling.py <get name="tuling" /></system>
+</template>
+</category>
+
+<!-- 开户 -->
+<category>
+<pattern>* 开户</pattern>
+<template>
+<srai>OPEN AN ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>开户 *</pattern>
+<template>
+<srai>OPEN AN ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>开户</pattern>
+<template>
+<srai>OPEN AN ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>OPEN AN ACCOUNT</pattern>
+<template>
+您是要开基本户还是一般户呢
+</template>
+</category>
+
+<!-- 开户/基本户 -->
+<category>
+<pattern>* 基本户</pattern>
+<template>
+<srai>BASIC ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>基本户 *</pattern>
+<template>
+<srai>BASIC ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>基本户</pattern>
+<template>
+<srai>BASIC ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>BASIC ACCOUNT</pattern>
+<template>
+基本户请您携带营业执照,税务登记证,组织机构代码证,或者三证合一的营业执照,法人身份证,经办人身份证,印鉴章等证件,业务经理会帮您办理
+</template>
+</category>
+
+<!-- 开户/一般户 -->
+<category>
+<pattern>* 一般户</pattern>
+<template>
+<srai>COMMON ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>一般户 *</pattern>
+<template>
+<srai>COMMON ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>一般户</pattern>
+<template>
+<srai>COMMON ACCOUNT</srai>
+</template>
+</category>
+
+<category>
+<pattern>COMMON ACCOUNT</pattern>
+<template>
+一般户请您携带营业执照,税务登记证,组织机构代码证,或者三证合一的营业执照,机构信用代码证,开户许可证,法人身份证,经办人身份证,印鉴章等证件,业务经理会帮您办理
+</template>
+</category>
+
+<!-- 开卡 -->
+<category>
+<pattern>开卡</pattern>
+<template>
+<srai>CREDIT CARD</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 开卡</pattern>
+<template>
+<srai>CREDIT CARD</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 办卡</pattern>
+<template>
+<srai>CREDIT CARD</srai>
+</template>
+</category>
+
+<category>
+<pattern>办卡</pattern>
+<template>
+<srai>CREDIT CARD</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 信用卡</pattern>
+<template>
+<srai>CREDIT CARD</srai>
+</template>
+</category>
+
+<category>
+<pattern>CREDIT CARD</pattern>
+<template>
+请问您是需要激活信用卡吗
+</template>
+</category>
+
+<!-- 开卡/信用卡 -->
+<category>
+<pattern>是 *</pattern>
+<that>请问您是需要激活信用卡吗</that>
+<template>
+请到大堂经理台填写申请单,填好后小民带您办理
+</template>
+</category>
+
+<category>
+<pattern>是</pattern>
+<that>请问您是需要激活信用卡吗</that>
+<template>
+请到大堂经理台填写申请单,填好后小民带您办理
+</template>
+</category>
+
+
+<!-- 开卡/借记卡或储蓄卡 -->
+<category>
+<pattern>不 *</pattern>
+<that>请问您是需要激活信用卡吗</that>
+<template>
+我们有最新的C bank系统,您可在我的C bank系统上操作
+</template>
+</category>
+
+<category>
+<pattern>* 借记卡</pattern>
+<template>
+我们有最新的C bank系统,您可在我的C bank系统上操作
+</template>
+</category>
+
+<category>
+<pattern>* 储蓄卡</pattern>
+<template>
+我们有最新的C bank系统,您可在我的C bank系统上操作
+</template>
+</category>
+
+<!-- 理财产品 -->
+<category>
+<pattern>* 理财产品</pattern>
+<template>
+<srai>F PRODUCTS</srai>
+</template>
+</category>
+
+<category>
+<pattern>理财产品 *</pattern>
+<template>
+<srai>F PRODUCTS</srai>
+</template>
+</category>
+
+<category>
+<pattern>理财产品</pattern>
+<template>
+<srai>F PRODUCTS</srai>
+</template>
+</category>
+
+<category>
+<pattern>F PRODUCTS</pattern>
+<template>
+我行的理财产品非常多,您可以去咨询我们的大堂经理姐姐,她会根据您的情况给您推荐最合适的产品
+</template>
+</category>
+
+<!-- 小民能力 -->
+<!-- 小民能力/SOME ABILITY -->
+<category>
+<pattern>你会什么</pattern>
+<template>
+<srai>SOME ABILITY</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 你会什么</pattern>
+<template>
+<srai>SOME ABILITY</srai>
+</template>
+</category>
+
+<category>
+<pattern>你会什么 *</pattern>
+<template>
+<srai>SOME ABILITY</srai>
+</template>
+</category>
+
+<category>
+<pattern>SOME ABILITY</pattern>
+<template>
+<random>
+<li>我会的可多了,迎宾,百科知识问答,办理业务,唱歌</li>
+<li>小民很厉害的哦,会讲故事,讲笑话,卖萌,唱歌,老多老多啦,我四世界上最帅的人,欧夜</li>
+</random>
+</template>
+</category>
+
+<!-- 小民能力/OTHER ABILITY -->
+<category>
+<pattern>你还会什么</pattern>
+<template>
+<srai>OTHER ABILITY</srai>
+</template>
+</category>
+
+<category>
+<pattern>除了这些呢</pattern>
+<template>
+<srai>OTHER ABILITY</srai>
+</template>
+</category>
+
+<category>
+<pattern>你还会什么 *</pattern>
+<template>
+<srai>OTHER ABILITY</srai>
+</template>
+</category>
+
+<category>
+<pattern>OTHER ABILITY</pattern>
+<template>
+跳舞,拍照,转圈,敬礼,卖萌发呆也都会哦
+</template>
+</category>
+
+<!-- 实时查询/网银 -->
+<category>
+<pattern>转账手续费 *</pattern>
+<template>
+<srai>TRANSFER FEE</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 转账手续费</pattern>
+<template>
+<srai>TRANSFER FEE</srai>
+</template>
+</category>
+<category>
+
+<pattern>* 转账手续费 *</pattern>
+<template>
+<srai>TRANSFER FEE</srai>
+</template>
+</category>
+<category>
+
+<pattern>转账手续费</pattern>
+<template>
+<srai>TRANSFER FEE</srai>
+</template>
+</category>
+
+<category>
+<pattern>TRANSFER FEE</pattern>
+<template>
+请问您想问的是同城还是异地
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>请问您想问的是同城还是异地</that>
+<template>
+<think><set name="ifSameCity"><formal><star/></formal></set></think>
+请问您想问的是跨行还是本行
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>请问您想问的是跨行还是本行</that>
+<template>
+<think><set name="ifSameBank"><formal><star/></formal></set></think>
+<system>python api/query.py fee <get name="ifSameCity" /> <get name="ifSameBank" /></system>
+</template>
+</category>
+
+
+<!-- 女朋友 -->
+<category>
+<pattern>女朋友</pattern>
+<template>
+<srai>GIRLFRIEND</srai>
+</template>
+</category>
+
+<category>
+<pattern>女朋友 *</pattern>
+<template>
+<srai>GIRLFRIEND</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 女朋友</pattern>
+<template>
+<srai>GIRLFRIEND</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 女朋友 *</pattern>
+<template>
+<srai>GIRLFRIEND</srai>
+</template>
+</category>
+
+<category>
+<pattern>GIRLFRIEND</pattern>
+<template>
+我已经有女朋友了.我女朋友是静静.
+</template>
+</category>
+
+<category>
+<pattern>最漂亮</pattern>
+<template>
+<srai>M BEAUTIFUL</srai>
+</template>
+</category>
+
+<category>
+<pattern>最漂亮 *</pattern>
+<template>
+<srai>M BEAUTIFUL</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 最漂亮</pattern>
+<template>
+<srai>M BEAUTIFUL</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 最漂亮 *</pattern>
+<template>
+<srai>M BEAUTIFUL</srai>
+</template>
+</category>
+
+<category>
+<pattern>M BEAUTIFUL</pattern>
+<template>
+在我的心里,静静最漂亮.我最爱最爱静静了
+</template>
+</category>
+
+<category>
+<pattern>最帅</pattern>
+<template>
+<srai>M COOL</srai>
+</template>
+</category>
+
+<category>
+<pattern>最帅 *</pattern>
+<template>
+<srai>M COOL</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 最帅</pattern>
+<template>
+<srai>M COOL</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 最帅 *</pattern>
+<template>
+<srai>M COOL</srai>
+</template>
+</category>
+
+<category>
+<pattern>M COOL</pattern>
+<template>
+在我的心里,陶行长最帅,我老崇拜他了
+</template>
+</category>
+
+<category>
+<pattern>更帅</pattern>
+<template>
+<srai>COOLER</srai>
+</template>
+</category>
+
+<category>
+<pattern>更帅 *</pattern>
+<template>
+<srai>COOLER</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 更帅</pattern>
+<template>
+<srai>COOLER</srai>
+</template>
+</category>
+
+<category>
+<pattern>* 更帅 *</pattern>
+<template>
+<srai>COOLER</srai>
+</template>
+</category>
+
+<category>
+<pattern>COOLER</pattern>
+<template>
+都帅
+</template>
+</category>
+
+</aiml>

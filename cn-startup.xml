@@ -1,0 +1,15 @@
+<aiml version="1.0">
+
+<!-- This category works with the CN AIML Set -->
+<category>
+<pattern>LOAD AIML CN</pattern>
+<template>
+
+<!-- Load chinese AIML set -->
+<!-- <learn>cn-profile.aiml</learn> -->
+<learn>chinese/cn-*.aiml</learn>
+
+</template>
+</category>
+
+</aiml>
